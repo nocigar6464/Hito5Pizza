@@ -27,7 +27,13 @@ function Home() {
   return (
     <section>
       <Header />
-      <div style={{ marginTop: "2em" }}>
+      <div
+        style={{
+          marginTop: "2em",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}>
         <CardPizza productos={productos} />
       </div>
     </section>
