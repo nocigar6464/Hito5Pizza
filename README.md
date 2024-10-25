@@ -11,3 +11,4 @@ Currently, two official plugins are available:
 # React_Hito2Pizza
 # React_Hito2Pizza
 # React_Hito3Pizza
+# Hito4Pizza
