@@ -1,7 +1,4 @@
-//para usar en enrutador
 import { Link } from "react-router-dom";
-
-//componentes de react
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -20,6 +17,9 @@ function Navegador() {
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">
               🍕 Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/pizza/p001">
+              🍕 Pizza Unica
             </Nav.Link>
             {token ? (
               <>
@@ -40,7 +40,7 @@ function Navegador() {
                 </Nav.Link>
               </>
             )}
-            <Nav.Link>
+            <Nav.Link as={Link} to="/cart">
               🛒 Total $
               {total.toLocaleString("es-ES", {
                 minimumFractionDigits: 0,

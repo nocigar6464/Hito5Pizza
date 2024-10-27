@@ -1,8 +1,8 @@
+import React from "react";
 import Button from "react-bootstrap/Button";
 import { Card, Row, Col } from "react-bootstrap";
 
 function CardPizza({ productos = [] }) {
-  // Aseguramos que productos sea un array, por defecto vacío
   return (
     <Row>
       {productos.length > 0 ? (
@@ -12,10 +12,15 @@ function CardPizza({ productos = [] }) {
               <Card.Img variant="top" src={producto.img} />
               <Card.Body>
                 <Card.Title>{producto.name}</Card.Title>
-                <Card.Text>{producto.ingredients}</Card.Text>
-                <Card.Text>${producto.price}</Card.Text>
+                <Card.Text>Ingredientes:</Card.Text>
+                <ul>
+                  {producto.ingredients.map((ingrediente, idx) => (
+                    <li key={idx}>{ingrediente}</li>
+                  ))}
+                </ul>
+                <Card.Text>Precio: ${producto.price}</Card.Text>
                 <div>
-                  <Button style={{ marginRight: "5em" }} variant="primary">
+                  <Button variant="primary" style={{ marginRight: "1em" }}>
                     Ver más
                   </Button>
                   <Button variant="dark">Añadir</Button>
